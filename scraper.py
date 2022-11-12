@@ -20,7 +20,7 @@ for year in years:
     soup.find('tr', class_="over_header").decompose()
     mvp_table = soup.find_all(id='mvp')
     mvp = pd.read_html(str(mvp_table))[0]
-    mvp["year"] = year
+    mvp["Year"] = year
     dfs.append(mvp)
 
 mvps = pd.concat(dfs)
