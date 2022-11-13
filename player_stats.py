@@ -35,5 +35,7 @@ for year in years:
     player_df["Year"] = year  
     dfs.append(player_df)
 
-print(dfs)
+players = pd.concat(dfs)
+players.to_csv("players.csv")
+# print(players)
    
